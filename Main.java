@@ -9,13 +9,19 @@ public class Main {
         Man seledochkin = new Man("Селедочкин");
         Tasks firstTask = new Tasks("вопрос");
         Tasks secondTask = new Tasks("вопрос");
-        Mineral antilunite = new Mineral("антилунит", Transparency.UNKNOWN, Color.UNKNOWN, ThermalConductivity.UNKNOWN,
-                ElectricalСonductivity.UNKNOWN, Weight.UNKNOMN, MeltingTemperature.UNKNOWN, Location.UNKNOWN);
-        Mineral lunite = new Mineral("лунит", Transparency.OPAQOE, antilunite.chooseColor("лунит"),
-                ThermalConductivity.GOOD, ElectricalСonductivity.BAD, Weight.BIG, MeltingTemperature.HIGH, Location.DEEP);
+        Mineral antilunite = new Mineral.MineralBuilder("антилунит").build();
+        Mineral lunite = new Mineral.MineralBuilder("лунит")
+                .setTransparency(Transparency.OPAQOE)
+                .setColor(antilunite.chooseColor("лунит"))
+                .setThermalConductivity(ThermalConductivity.GOOD)
+                .setElectricalСonductivity(ElectricalСonductivity.BAD)
+                .setWeight(Weight.BIG)
+                .setMeltingTemperature(MeltingTemperature.HIGH)
+                .setLocation(Location.DEEP)
+                .build();
         znaika.decide(professor, firstTask, lunite, antilunite);
         lunite.determine(antilunite);
-        NaturePower spacePower = new NaturePower("Космические магнитные силы", Konditions.UNKNOWN);
+        NaturePower spacePower = new NaturePower("Космические магнитные силы", Conditions.UNKNOWN);
         Things device = new Things("прибор невесомости", Size.SMALL);
         spacePower.combine(lunite, lunite);
         spacePower.combine(lunite, antilunite);

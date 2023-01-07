@@ -1,12 +1,11 @@
 package enums;
 
-public enum MeltingTemperature {
-    LOW ("низкую"),
-    HIGH ("высокую"),
+public enum Conditions {
+    WEIGHTLESSNESS ("невесомости"),
+    WEIGHT ("весомости"),
     UNKNOWN ("неизвестный");
     private String title;
-
-    MeltingTemperature(String title){
+    Conditions(String title){
         this.title = title;
     }
     public String getTitle(){
@@ -15,6 +14,6 @@ public enum MeltingTemperature {
 
     @Override
     public String toString() {
-        return title + " температуру плавления";
+        return "состояние " + title;
     }
 }

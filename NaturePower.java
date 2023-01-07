@@ -1,9 +1,9 @@
-import enums.Konditions;
+import enums.Conditions;
 public class NaturePower extends Entity implements Interaction{
     public final String name;
-    public Konditions condition;
+    public Conditions condition;
 
-    public NaturePower(String name, Konditions condition) {
+    public NaturePower(String name, Conditions condition) {
         this.name = name;
         this.condition = condition;
     }
@@ -14,12 +14,12 @@ public class NaturePower extends Entity implements Interaction{
     @Override
     public void combine(Mineral lunite, Mineral antilunite) {
         if (!lunite.compare(antilunite)){
-            this.condition = Konditions.WEIGHT;
-            System.out.println("Поэтому " + antilunite + "у сопутствует " + lunite + ", так как состояние невесомости не наблюдается.");
+            this.condition = Conditions.WEIGHT;
+            System.out.println("Поэтому " + antilunite + "у сопутствует " + lunite + ", так как " + Conditions.WEIGHTLESSNESS + " не наблюдается.");
         }
         else{
-            this.condition = Konditions.WEIGHTLESSNESS;
-            System.out.print(this + " взаимодействуя с " + lunite + "ом, создают состояние невисомости. ");
+            this.condition = Conditions.WEIGHTLESSNESS;
+            System.out.print(this + " взаимодействуя с " + lunite + "ом, создают " + Conditions.WEIGHTLESSNESS + ".");
         }
     }
 }

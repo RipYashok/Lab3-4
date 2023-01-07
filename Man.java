@@ -1,4 +1,4 @@
-import enums.Konditions;
+import enums.Conditions;
 
 public class Man extends Entity{
     protected String name;
@@ -15,7 +15,7 @@ public class Man extends Entity{
         }
     }
     public void decide(Man man, Tasks task, Things thing, NaturePower power){
-        if ((this.name == "Фукусия" || this.name == "Селедочкин") && (man.name == "Фукусия" || man.name == "Селедочкин") && power.condition == Konditions.WEIGHT){
+        if ((this.name == "Фукусия" || this.name == "Селедочкин") && (man.name == "Фукусия" || man.name == "Селедочкин") && power.condition == Conditions.WEIGHT){
             System.out.println(this + " и " + man + " обсуждали " + task + ", что надо сделать, чтобы " + thing + " начал работать в новых условиях. ");
         }
     }

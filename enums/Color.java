@@ -1,10 +1,24 @@
 package enums;
 
 public enum Color {
-    VIOLET,
-    BLUE,
-    YELLOW,
-    GREEN,
-    GRAY_BROWN_CRIMSON,
-    UNKNOWN;
+    VIOLET ("фиолетовый"),
+    BLUE ("синий"),
+    YELLOW ("желтый"),
+    GREEN ("зеленый"),
+    GRAY_BROWN_CRIMSON ("серо-буромалиновый"),
+    UNKNOWN ("неизвестынй");
+
+    private String title;
+
+    Color(String title){
+        this.title = title;
+    }
+    public String getTitle(){
+        return title;
+    }
+
+    @Override
+    public String toString() {
+        return title;
+    }
 }
