@@ -6,6 +6,32 @@ public class Things extends Entity{
         this.name = name;
         this.size = size;
     }
+    public static class Drawing{
+        private String name;
+        public Drawing(String name){
+            this.name = name;
+        }
+        @Override
+        public String toString() {
+            return name;
+        }
+        public void createDrawing(Things first, Things second) {
+            if (first.equals(second) && first.size == Size.BIG) {
+                System.out.println("Если " + first + " " + first.size + ", и " + second + " " + second.size + ", то " + this + " будет увеличен до нужного размера.");
+            }
+        }
+    }
+    public void build(Things first, Things second){
+        if (first.equals(second) && first.size == Size.BIG){
+            this.size = Size.BIG;
+            System.out.println(" Взяв " + first.size + " " + first + " и " + second.size + " " + second +  " коротышки построили новый " + this + ".");
+        }
+    }
+    public class DetailsOfDevice{
+        public void getCloser(){
+            System.out.print("Как только детали прибора сблизились, возникло состояние невесомости.");
+        }
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -26,12 +52,5 @@ public class Things extends Entity{
     @Override
     public String toString() {
         return name;
-    }
-
-    public void bild(Things first, Things second) {
-        if (this.equals(first) && this.size == Size.BIG) {
-            second.size = Size.BIG;
-            System.out.println(this + " большой, " + first + " большой, " + second + " увеличен до нужного размера.");
-        }
     }
 }

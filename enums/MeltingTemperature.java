@@ -2,8 +2,7 @@ package enums;
 
 public enum MeltingTemperature {
     LOW ("низкую"),
-    HIGH ("высокую"),
-    UNKNOWN ("неизвестный");
+    HIGH ("высокую");
     private String title;
 
     MeltingTemperature(String title){

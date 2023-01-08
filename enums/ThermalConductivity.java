@@ -2,8 +2,7 @@ package enums;
 
 public enum ThermalConductivity {
     GOOD ("хорошую"),
-    BAD ("плохую"),
-    UNKNOWN ("неизвестный");
+    BAD ("плохую");
     private String title;
 
     ThermalConductivity(String title){

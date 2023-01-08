@@ -2,8 +2,7 @@ package enums;
 
 public enum ElectricalСonductivity {
     GOOD ("хорошую"),
-    BAD ("плохую"),
-    UNKNOWN ("неизвестный");
+    BAD ("плохую");
     private String title;
 
     ElectricalСonductivity(String title){

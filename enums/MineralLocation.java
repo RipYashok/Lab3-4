@@ -1,11 +1,11 @@
 package enums;
 
-public enum Transparency {
-    TRANSPARENT ("прозрачный"),
-    OPAQOE ("непрозрачный");
+public enum MineralLocation {
+    DEEP ("глубоко"),
+    NOTDEEP ("неглубоко");
     private String title;
 
-    Transparency(String title){
+    MineralLocation(String title){
         this.title = title;
     }
     public String getTitle(){
@@ -14,6 +14,6 @@ public enum Transparency {
 
     @Override
     public String toString() {
-        return title;
+        return title + " в недрах Луны";
     }
 }

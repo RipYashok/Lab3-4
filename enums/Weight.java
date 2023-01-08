@@ -2,8 +2,7 @@ package enums;
 
 public enum Weight {
     SMALL ("небольшой удельный вес"),
-    BIG ("большой удельный вес"),
-    UNKNOMN ("неизвестный");
+    BIG ("большой удельный вес");
     private String title;
 
     Weight(String title){

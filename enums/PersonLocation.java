@@ -1,11 +1,10 @@
 package enums;
 
-public enum Transparency {
-    TRANSPARENT ("прозрачный"),
-    OPAQOE ("непрозрачный");
+public enum PersonLocation {
+    MOON ("на Луне");
     private String title;
 
-    Transparency(String title){
+    PersonLocation(String title){
         this.title = title;
     }
     public String getTitle(){

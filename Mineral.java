@@ -10,7 +10,7 @@ public class Mineral extends Entity implements Coloring{
     private ElectricalСonductivity electricalConductivity;
     private Weight weight;
     private MeltingTemperature meltingTemperature;
-    private Location location;
+    private MineralLocation location;
     public Mineral(MineralBuilder mineralBuilder) {
         this.name = mineralBuilder.name;
         this.transparency = mineralBuilder.transparency;
@@ -29,7 +29,7 @@ public class Mineral extends Entity implements Coloring{
         private ElectricalСonductivity electricalConductivity;
         private Weight weight;
         private MeltingTemperature meltingTemperature;
-        private Location location;
+        private MineralLocation location;
         public MineralBuilder(String name){
             this.name = name;
         }
@@ -57,7 +57,7 @@ public class Mineral extends Entity implements Coloring{
             this.meltingTemperature = meltingTemperature;
             return this;
         }
-        public MineralBuilder setLocation(Location location) {
+        public MineralBuilder setLocation(MineralLocation location) {
             this.location = location;
             return this;
         }
@@ -87,7 +87,7 @@ public class Mineral extends Entity implements Coloring{
         }
         if (this.electricalConductivity.equals(ElectricalСonductivity.BAD)){
             second.electricalConductivity = ElectricalСonductivity.GOOD;
-            dataLunite.append(ElectricalСonductivity.BAD + ", ");
+            dataLunite.append(ElectricalСonductivity.BAD + ", " + "\n");
             dataAntilunite.append(ElectricalСonductivity.GOOD + ", ");
         }
         if (this.weight.equals(Weight.BIG)){
@@ -100,10 +100,10 @@ public class Mineral extends Entity implements Coloring{
             dataLunite.append(MeltingTemperature.LOW + " ");
             dataAntilunite.append(MeltingTemperature.HIGH + " ");
         }
-        if (this.location.equals(Location.DEEP)){
-            second.location = Location.NOTDEEP;
-            dataLunite.append("и залегает " + Location.DEEP + ", то");
-            dataAntilunite.append("и залегает " +  Location.NOTDEEP + ".");
+        if (this.location.equals(MineralLocation.DEEP)){
+            second.location = MineralLocation.NOTDEEP;
+            dataLunite.append("и залегает " + MineralLocation.DEEP + ", то");
+            dataAntilunite.append("и залегает " +  MineralLocation.NOTDEEP + ".");
         }
         System.out.println(dataLunite);
         System.out.println(dataAntilunite);

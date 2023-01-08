@@ -5,8 +5,7 @@ public enum Color {
     BLUE ("синий"),
     YELLOW ("желтый"),
     GREEN ("зеленый"),
-    GRAY_BROWN_CRIMSON ("серо-буромалиновый"),
-    UNKNOWN ("неизвестынй");
+    GRAY_BROWN_CRIMSON ("серо-буромалиновый");
 
     private String title;
 

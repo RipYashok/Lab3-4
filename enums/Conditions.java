@@ -2,8 +2,7 @@ package enums;
 
 public enum Conditions {
     WEIGHTLESSNESS ("невесомости"),
-    WEIGHT ("весомости"),
-    UNKNOWN ("неизвестный");
+    WEIGHT ("весомости");
     private String title;
     Conditions(String title){
         this.title = title;
